@@ -1,6 +1,7 @@
 package com.goga133.fintech2021.ui.main
 
 import android.os.Bundle
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,19 +10,19 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.goga133.fintech2021.R
+import com.goga133.fintech2021.business_logic.SwitchesButtons
 
 /**
  * A placeholder fragment containing a simple view.
  */
-class PlaceholderFragment : Fragment() {
+class PlaceholderFragment : Fragment(), SwitchesButtons {
 
     private lateinit var pageViewModel: PageViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        pageViewModel = ViewModelProvider(this).get(PageViewModel::class.java).apply {
-            setIndex(arguments?.getInt(ARG_SECTION_NUMBER) ?: 1)
-        }
+        pageViewModel = ViewModelProvider(this).get(PageViewModel::class.java)
+
     }
 
     override fun onCreateView(
@@ -33,27 +34,28 @@ class PlaceholderFragment : Fragment() {
         pageViewModel.text.observe(this, Observer<String> {
             textView.text = it
         })
+
         return root
     }
 
     companion object {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private const val ARG_SECTION_NUMBER = "section_number"
+        private const val ARG_PAGE_INFO = "page_info"
 
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
         @JvmStatic
-        fun newInstance(sectionNumber: Int): PlaceholderFragment {
+        fun newInstance(pageInfo: Parcelable): PlaceholderFragment {
             return PlaceholderFragment().apply {
                 arguments = Bundle().apply {
-                    putInt(ARG_SECTION_NUMBER, sectionNumber)
+                    putParcelable(ARG_PAGE_INFO, pageInfo)
                 }
             }
         }
+    }
+
+    override fun onClickLeftButton(v: View) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onClickRightButton(v: View) {
+        TODO("Not yet implemented")
     }
 }
