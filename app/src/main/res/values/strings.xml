@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Fintech2021</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+
+    <string name="tab_random">Случайные</string>
+    <string name="tab_top">Лучшие</string>
+    <string name="tab_latest">Последние</string>
+    <string name="tab_hot">Горячие</string>
 </resources>
