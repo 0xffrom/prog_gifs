@@ -26,7 +26,9 @@
 
 ## Сборка
 [Скачать](https://github.com/goga133/Fintech2021-Android/releases) 
+
 app-debug.apk ~ 5217 KB
+
 app-release.apk + proguard ~ 1990 KB
 
 ## License
