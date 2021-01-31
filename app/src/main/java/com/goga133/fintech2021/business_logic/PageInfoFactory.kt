@@ -4,9 +4,13 @@ import com.goga133.fintech2021.R
 import com.goga133.fintech2021.data.PageInfo
 import com.goga133.fintech2021.data.PageSection
 
-class PageInfoFactory {
+/**
+ * Фабрика страниц.
+ */
+class PageInfoFactory{
     companion object {
-        val pages: Set<PageInfo> = setOf(
+
+        val PAGES: Set<PageInfo> = setOf(
             PageInfo(R.string.tab_random, PageSection.RANDOM),
             PageInfo(R.string.tab_top, PageSection.TOP),
             PageInfo(R.string.tab_latest, PageSection.LATEST),
