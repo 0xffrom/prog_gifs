@@ -25,7 +25,9 @@
 [![Watch the video](https://img.youtube.com/vi/40yNIcs5RiM/hqdefault.jpg)](https://www.youtube.com/watch?v=40yNIcs5RiM&feature=youtu.be)
 
 ## Сборка
-Итоговый вес приложения: *1993 КБ* [Скачать](https://github.com/goga133/Fintech2021-Android/releases) 
+[Скачать](https://github.com/goga133/Fintech2021-Android/releases) 
+app-debug.apk ~ 5217 KB
+app-release.apk + proguard ~ 1990 KB
 
 ## License
 
