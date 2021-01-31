@@ -14,19 +14,37 @@
         <item name="android:textColorPrimary">@color/primaryTextColor</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <item name="android:actionMenuTextColor">@color/secondaryColor</item>
+        <item name="android:actionModeBackground">@color/primaryColor</item>
+
+        <item name="colorBackgroundFloating">@color/primaryDarkColor</item>
     </style>
 
+    <!-- PopupMenu Theme -->
+    <style name="Theme.Fintech2021.PopupMenu" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="popupMenuBackground">@color/primaryColor</item>
+    </style>
     <!-- No ActionBar Theme -->
     <style name="Theme.Fintech2021.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
+    <!-- Pregerences Theme -->
+    <style name="Theme.Fintech2021.Preferences" parent="Theme.AppCompat">
+        <item name="android:background">@color/primaryLightColor</item>
+    </style>
     <!-- TabLayout Theme -->
     <style name="Theme.Fintech2021.TabLayout" parent="Widget.Design.TabLayout">
         <item name="tabIndicatorColor">@color/secondaryColor</item>
         <item name="tabIndicatorHeight">4dp</item>
+        <item name="tabTextAppearance">@style/Theme.Fintech2021.TabLayout.TextAppearance</item>
         <item name="tabSelectedTextColor">@color/secondaryColor</item>
+    </style>
+
+    <!-- TabLayout TextAppearance -->
+    <style name="Theme.Fintech2021.TabLayout.TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
     </style>
 
     <!-- FloatingButton Theme -->
