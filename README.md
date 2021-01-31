@@ -22,7 +22,7 @@
 ![](readme-files/unit-tests.jpeg)
 
 ## Демонстрация
-![](http://188.120.233.197/uploads/demo.gif)
+![](https://i.ibb.co/y619tX2/demo.gif)
 
 ## Сборка
 Итоговый вес приложения: *1993 КБ* [Скачать](https://github.com/goga133/Fintech2021-Android/releases) 
