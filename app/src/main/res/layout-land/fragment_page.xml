@@ -17,6 +17,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
+            android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/card_margin"
@@ -30,7 +31,7 @@
 
                 <ImageView
                     android:id="@+id/imageView_gif"
-                    android:layout_width="350dp"
+                    android:layout_width="450dp"
                     android:layout_height="225dp"
                     android:contentDescription="@string/description_image_gif"
                     android:scaleType="centerCrop" />
