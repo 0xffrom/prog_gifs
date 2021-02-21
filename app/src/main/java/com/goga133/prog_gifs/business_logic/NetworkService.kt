@@ -1,4 +1,4 @@
-package com.goga133.fintech2021.business_logic
+package com.goga133.prog_gifs.business_logic
 
 import okhttp3.Interceptor
 import okhttp3.Interceptor.Companion.invoke

@@ -1,4 +1,4 @@
-package com.goga133.fintech2021.ui.activity_main
+package com.goga133.prog_gifs.ui.activity_main
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,10 +7,10 @@ import android.view.MenuItem
 import com.google.android.material.tabs.TabLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
-import com.goga133.fintech2021.R
-import com.goga133.fintech2021.databinding.ActivityMainBinding
-import com.goga133.fintech2021.ui.fragment_page.PagerAdapter
-import com.goga133.fintech2021.ui.activity_settings.SettingsActivity
+import com.goga133.prog_gifs.R
+import com.goga133.prog_gifs.databinding.ActivityMainBinding
+import com.goga133.prog_gifs.ui.fragment_page.PagerAdapter
+import com.goga133.prog_gifs.ui.activity_settings.SettingsActivity
 import com.google.android.material.tabs.TabLayoutMediator
 
 /**

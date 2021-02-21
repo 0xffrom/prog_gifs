@@ -1,10 +1,10 @@
-package com.goga133.fintech2021.ui.fragment_page
+package com.goga133.prog_gifs.ui.fragment_page
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.goga133.fintech2021.business_logic.NetworkService
-import com.goga133.fintech2021.data.*
+import com.goga133.prog_gifs.business_logic.NetworkService
+import com.goga133.prog_gifs.data.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -33,6 +33,12 @@ class PageViewModel : ViewModel() {
         get() = _panel
 
     /**
+     * Неизменяемая LiveData информацинной панели.
+     */
+    val infoPanel: LiveData<Boolean>
+        get() = _infoPanel
+
+    /**
      * Текущее состояние изображения. См. [State]
      */
     private val _gifState = MutableLiveData<State<Gif?>>()
@@ -50,6 +56,12 @@ class PageViewModel : ViewModel() {
      * Текущий индекс страницы. Изначально -1.
      */
     private var currentIndex = -1
+
+
+    /**
+     * Текущее состояние информационной панели.
+     */
+    private val _infoPanel = MutableLiveData<Boolean>()
 
     /**
      * Текущее количество страниц, которое можно загрузить. Изначально -1.
@@ -97,6 +109,18 @@ class PageViewModel : ViewModel() {
     fun refresh() {
         if (_panel.value?.refreshButton == true) {
             loadGifByPageSection()
+        }
+    }
+
+    /**
+     * Метод для открытия/закрытия информационной панели.
+     */
+    fun doInfoPanel(){
+        if(_infoPanel.value != true){
+            _infoPanel.postValue(true)
+        }
+        else{
+            _infoPanel.postValue(false)
         }
     }
 

@@ -7,74 +7,73 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment_page.PageFragment">
 
-    <androidx.core.widget.NestedScrollView
+    <ImageView
+        android:id="@+id/imageView_gif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/description_image_gif"
+        android:scaleType="centerCrop" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:layout_constraintBottom_toTopOf="@+id/fab_refresh"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/card_margin"
-            app:cardCornerRadius="@dimen/card_corner_radius"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="16dp">
+            android:orientation="vertical">
 
-            <ProgressBar
-                android:id="@+id/progress_bar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom" />
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:padding="4dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-                <ImageView
-                    android:id="@+id/imageView_gif"
-                    android:layout_width="match_parent"
-                    android:layout_height="350dp"
-                    android:contentDescription="@string/description_image_gif"
-                    android:scaleType="centerCrop" />
+            <TextView
+                android:id="@+id/textView_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textSize="12sp" />
 
-                <TextView
-                    android:id="@+id/textView_description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="24dp"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:gravity="center"
+                android:textSize="12sp" />
 
-                <TextView
-                    android:id="@+id/textView_author"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginHorizontal="48dp"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/textView_date"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginHorizontal="48dp"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-    </androidx.core.widget.NestedScrollView>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:scrollbarSize="22dp"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_back"
-        style="@style/Theme.Fintech2021.FloatingButton"
+        style="@style/Theme.ProgGifs.FloatingButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|start"
@@ -84,9 +83,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_arrow_left" />
 
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_info"
+        style="@style/Theme.ProgGifs.FloatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/fab_description_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fab_next"
+        app:srcCompat="@drawable/ic_info" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_refresh"
-        style="@style/Theme.Fintech2021.FloatingButton"
+        style="@style/Theme.ProgGifs.FloatingButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
@@ -99,7 +111,7 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_next"
-        style="@style/Theme.Fintech2021.FloatingButton"
+        style="@style/Theme.ProgGifs.FloatingButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"

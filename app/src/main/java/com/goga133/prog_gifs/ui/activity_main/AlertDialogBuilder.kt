@@ -1,9 +1,9 @@
-package com.goga133.fintech2021.ui.activity_main
+package com.goga133.prog_gifs.ui.activity_main
 
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.goga133.fintech2021.R
+import com.goga133.prog_gifs.R
 import timber.log.Timber
 
 /**

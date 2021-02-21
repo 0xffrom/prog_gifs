@@ -1,4 +1,4 @@
-package com.goga133.fintech2021.ui.fragment_page
+package com.goga133.prog_gifs.ui.fragment_page
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
@@ -12,13 +12,13 @@ import androidx.preference.PreferenceManager
 import com.bumptech.glide.GenericTransitionOptions
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.goga133.fintech2021.R
-import com.goga133.fintech2021.business_logic.EventObserver
-import com.goga133.fintech2021.data.Event
-import com.goga133.fintech2021.data.Gif
-import com.goga133.fintech2021.data.PageInfo
-import com.goga133.fintech2021.databinding.FragmentPageBinding
-import com.goga133.fintech2021.business_logic.RequestDrawable
+import com.goga133.prog_gifs.R
+import com.goga133.prog_gifs.business_logic.EventObserver
+import com.goga133.prog_gifs.data.Event
+import com.goga133.prog_gifs.data.Gif
+import com.goga133.prog_gifs.data.PageInfo
+import com.goga133.prog_gifs.databinding.FragmentPageBinding
+import com.goga133.prog_gifs.business_logic.RequestDrawable
 import com.google.android.material.snackbar.Snackbar
 import timber.log.Timber
 
@@ -95,11 +95,21 @@ class PageFragment : Fragment(), EventObserver<Gif> {
             binding.fabRefresh.isEnabled = it.refreshButton
         }
 
+        binding.cardView.animate().alpha(0.0f)
+        pageViewModel.infoPanel.observe(viewLifecycleOwner){
+            if(it){
+                binding.cardView.animate().alpha(0.6f)
+            }
+            else{
+                binding.cardView.animate().alpha(0.0f)
+            }
+        }
+
         // Выставляем кнопкам слушателей:
         binding.fabBack.setOnClickListener { pageViewModel.prevGif() }
         binding.fabNext.setOnClickListener { pageViewModel.nextGif() }
         binding.fabRefresh.setOnClickListener { pageViewModel.refresh() }
-
+        binding.fabInfo?.setOnClickListener{pageViewModel.doInfoPanel()}
         // Проводим загрузку
         pageViewModel.initLoad()
 

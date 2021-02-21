@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Fintech2021"
+rootProject.name = "ProgGifs"

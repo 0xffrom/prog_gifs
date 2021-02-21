@@ -1,11 +1,11 @@
-package com.goga133.fintech2021.ui.fragment_page
+package com.goga133.prog_gifs.ui.fragment_page
 
 import android.graphics.drawable.Drawable
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
-import com.goga133.fintech2021.business_logic.RequestDrawable
+import com.goga133.prog_gifs.business_logic.RequestDrawable
 
 /**
  * Имплиментация [RequestListener]. Каждый метод [RequestListener] вызывает аналогичный метод

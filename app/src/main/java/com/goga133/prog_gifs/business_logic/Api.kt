@@ -1,7 +1,7 @@
-package com.goga133.fintech2021.business_logic
+package com.goga133.prog_gifs.business_logic
 
-import com.goga133.fintech2021.data.Gif
-import com.goga133.fintech2021.data.ResponseWrapper
+import com.goga133.prog_gifs.data.Gif
+import com.goga133.prog_gifs.data.ResponseWrapper
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

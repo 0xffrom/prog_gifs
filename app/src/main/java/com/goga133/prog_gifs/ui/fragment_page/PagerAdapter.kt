@@ -1,9 +1,9 @@
-package com.goga133.fintech2021.ui.fragment_page
+package com.goga133.prog_gifs.ui.fragment_page
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.goga133.fintech2021.business_logic.PageInfoFactory
+import com.goga133.prog_gifs.business_logic.PageInfoFactory
 
 /**
  * Адаптер под ViewPager2.

@@ -11,14 +11,14 @@
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
-            app:popupTheme="@style/Theme.Fintech2021.PopupMenu"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/Theme.ProgGifs.PopupMenu" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
-            style="@style/Theme.Fintech2021.TabLayout"
+            style="@style/Theme.ProgGifs.TabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

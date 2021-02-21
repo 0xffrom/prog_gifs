@@ -1,4 +1,4 @@
-package com.goga133.fintech2021.data
+package com.goga133.prog_gifs.data
 
 import android.os.Parcel
 import android.os.Parcelable

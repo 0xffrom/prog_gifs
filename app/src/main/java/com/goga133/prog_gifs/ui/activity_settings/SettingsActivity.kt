@@ -1,9 +1,9 @@
-package com.goga133.fintech2021.ui.activity_settings
+package com.goga133.prog_gifs.ui.activity_settings
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
-import com.goga133.fintech2021.R
+import com.goga133.prog_gifs.R
 
 /**
  * Activity с настройками. Подгружается с [R.xml.root_preferences]

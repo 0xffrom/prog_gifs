@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.goga133.fintech2021">
+    package="com.goga133.prog_gifs">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,16 +10,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Fintech2021"
+        android:theme="@style/Theme.ProgGifs"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
-            android:name=".ui.activity_settings.SettingsActivity"
+            android:name="com.goga133.prog_gifs.ui.activity_settings.SettingsActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".ui.activity_main.MainActivity"
+            android:name="com.goga133.prog_gifs.ui.activity_main.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Fintech2021.NoActionBar">
+            android:theme="@style/Theme.ProgGifs.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
